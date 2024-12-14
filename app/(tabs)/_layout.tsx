@@ -1,11 +1,14 @@
-import { Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import React from "react";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { HapticTab } from "@/components/HapticTab";
 import { View } from "react-native";
 
 export default function TabLayout() {
-  return (
+  return <Redirect href="/login" />;
+}
+
+/* return (
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -62,3 +65,4 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+ */

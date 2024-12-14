@@ -1,10 +1,9 @@
 import { View, Text } from "react-native";
 
-export default function HomeScreen() {
+export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white gap-2">
-      <Text className="text-2xl font-bold text-gray-400">FlashcardAi</Text>
-      <Text className="text-lg text-gray-400">Let's get started</Text>
+    <View className="flex-1 items-center justify-center">
+      <Text className="text-gray-700 font-bold text-center">Hello World</Text>
     </View>
   );
 }

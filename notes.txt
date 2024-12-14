@@ -1,0 +1,6 @@
+- For persistant auth sessions app.json needs   "platforms": ["ios", "android"], if in supabase.ts is   persistSession: true,
+    for reference: https://github.com/supabase/supabase-js/issues/786
+
+- for deep linking: https://www.youtube.com/watch?v=AE7dKIKMJy4 check the YT video 16:30 
+
+- in auth providers you can set email verification to true and also add other logins like google etc.
