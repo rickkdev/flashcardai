@@ -3,12 +3,16 @@ import React from "react";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { HapticTab } from "@/components/HapticTab";
 import { View } from "react-native";
+import { useAuth } from "@/app/context/AuthProvider";
 
 export default function TabLayout() {
-  return <Redirect href="/login" />;
-}
+  const { isAuthenticated } = useAuth();
 
-/* return (
+  if (!isAuthenticated) {
+    return <Redirect href="/login" />;
+  }
+
+  return (
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -65,4 +69,3 @@ export default function TabLayout() {
     </Tabs>
   );
 }
- */

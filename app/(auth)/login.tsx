@@ -8,6 +8,7 @@ import {
   Button,
 } from "react-native";
 import { supabase } from "@/lib/supabase";
+import { router } from "expo-router";
 
 // Tells Supabase Auth to continuously refresh the session automatically if
 // the app is in the foreground. When this is added, you will continue to receive
@@ -33,7 +34,11 @@ export default function Auth() {
       password: password,
     });
 
-    if (error) Alert.alert(error.message);
+    if (error) {
+      Alert.alert(error.message);
+    } else {
+      router.replace("/(tabs)");
+    }
     setLoading(false);
   }
 
